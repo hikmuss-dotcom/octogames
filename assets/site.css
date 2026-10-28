@@ -1,0 +1,76 @@
+:root {
+  --bg: #0f121a;
+  --panel: #171c28;
+  --text: #dfe4ef;
+  --muted: #8f99ad;
+  --accent: #ff7319;
+  --line: #262d3d;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; }
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.brand img { height: 44px; width: auto; display: block; }
+.langs { display: flex; flex-wrap: wrap; gap: 6px; }
+.langs a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: 14px;
+}
+.langs a.on { color: #fff; border-color: var(--accent); background: rgba(255, 115, 25, 0.12); }
+
+.doc { max-width: 760px; margin: 0 auto; padding: 28px 16px 48px; }
+.doc h1 { font-size: 28px; line-height: 1.25; margin: 0 0 6px; }
+.doc h2 { font-size: 19px; margin: 30px 0 8px; color: #fff; }
+.doc .meta { color: var(--muted); margin-top: 0; }
+.doc ul { padding-left: 22px; }
+.doc li { margin: 6px 0; }
+
+.hero { text-align: center; padding: 56px 16px 24px; }
+.hero .logo { width: min(560px, 100%); }
+.hero p { color: var(--muted); max-width: 620px; margin: 18px auto 0; }
+.games { max-width: 760px; margin: 0 auto; padding: 16px 16px 48px; }
+.game {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+}
+.game .icon { width: 96px; height: 96px; border-radius: 22px; flex-shrink: 0; }
+.game h2 { margin: 0 0 4px; font-size: 22px; }
+.game p { margin: 0 0 10px; color: var(--muted); }
+.game .links { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+@media (max-width: 480px) {
+  .game { flex-direction: column; text-align: center; }
+  .game .links { justify-content: center; }
+}
+
+.foot {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 20px 16px 32px;
+  border-top: 1px solid var(--line);
+}
